@@ -48,8 +48,8 @@ Omarchy audio/Bluetooth panel primitives.
   requested; identity reported by that tool's response, not independently attested).
   Fable and a bounded Opus fallback timed out without review output. No completed
   Claude code review is claimed. The main implementation/checks used GPT-6 Astra.
-- GitHub Actions are prepared but are not considered passed until run remotely.
-  No public repository or release was created by the local installation.
+- GitHub Actions run on the public repository; consult the checks for the exact
+  commit being installed. Publishing the source is not a tagged hardware release.
 
 ## Design decisions
 

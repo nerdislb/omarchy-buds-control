@@ -36,7 +36,14 @@ This AUR package is built locally; its build dependencies include Rust and
 protobuf. Review its PKGBUILD as with any AUR package. The plugin never installs
 packages or requests root itself.
 
-## Install from a checkout
+## Install
+
+```sh
+omarchy plugin add https://github.com/nerdislb/omarchy-buds-control --enable
+```
+
+This does **not** install pbpctrl; install that dependency separately as above.
+Alternatively, from a checkout:
 
 ```sh
 ./install.sh
@@ -58,11 +65,6 @@ Move the icon using Omarchy's bar editor. Open it from a terminal with:
 omarchy-shell io.github.nerdislb.buds-control open
 omarchy-shell io.github.nerdislb.buds-control status
 ```
-
-Once this repository is published, it can be installed directly with
-`omarchy plugin add <repository-url> --enable`; the required manifest is at the
-repository root. That command does **not** install pbpctrl. Publication has not
-been assumed in these instructions.
 
 ## Controls
 

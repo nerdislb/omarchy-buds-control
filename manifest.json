@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Bernhard Slatinsek",
   "license": "MIT",
+  "repository": "https://github.com/nerdislb/omarchy-buds-control",
   "description": "Pixel Buds batteries and noise control, with optional BudsLink support",
   "kinds": ["bar-widget"],
   "entryPoints": {"barWidget": "BarWidget.qml"},
