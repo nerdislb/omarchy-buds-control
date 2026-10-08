@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import Quickshell
 import qs.Commons
+import qs.Commons as Commons
 import qs.Ui as Ui
 import "backend" as Backend
 
@@ -17,7 +18,7 @@ Ui.Panel {
     readonly property var device: buds.device
     readonly property var modes: device && buds.controlsAvailable ? device.modes : []
     readonly property var batteries: [battery(1, "Left bud"), battery(2, "Right bud"), battery(3, "Case")]
-    readonly property color foreground: bar ? bar.foreground : Color.foreground
+    readonly property color foreground: bar ? bar.foreground : Commons.Color.foreground
     readonly property string family: bar ? bar.fontFamily : Style.font.family
     implicitWidth: button.implicitWidth
     implicitHeight: button.implicitHeight
@@ -176,7 +177,7 @@ Ui.Panel {
                                         font.family: root.family
                                         font.pixelSize: Style.font.title
                                         font.bold: true
-                                        color: batteryColumn.modelData.available && batteryColumn.modelData.level <= 20 ? Color.urgent : root.foreground
+                                        color: batteryColumn.modelData.available && batteryColumn.modelData.level <= 20 ? Commons.Color.urgent : root.foreground
                                     }
                                     Caption { text: root.batteryDetail(batteryColumn.modelData); width: parent.width }
                                 }
@@ -230,7 +231,7 @@ Ui.Panel {
                     Caption {
                         visible: root.buds.actionText !== ""
                         text: root.buds.actionText
-                        color: root.buds.actionFailed ? Color.urgent : root.foreground
+                        color: root.buds.actionFailed ? Commons.Color.urgent : root.foreground
                         opacity: 1
                         width: parent.width
                     }
@@ -242,7 +243,7 @@ Ui.Panel {
                     Caption {
                         visible: root.buds.errorText !== ""
                         text: root.buds.errorText
-                        color: Color.urgent
+                        color: Commons.Color.urgent
                         opacity: 1
                         width: parent.width
                     }
